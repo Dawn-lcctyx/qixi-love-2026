@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>19.8.2026</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="sky">
+
+
+    <!-- =====================
+         星空
+    ====================== -->
+
+    <div class="stars"></div>
+
+
+    <!-- =====================
+         樱花花瓣
+    ====================== -->
+
+    <div class="petals">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+
+    <!-- =====================
+         月亮
+    ====================== -->
+
+    <div class="moon"></div>
+
+
+    <!-- =====================
+         两边的花枝
+    ====================== -->
+
+    <div class="flower-branch branch-left">
+
+        <span>🌸</span>
+        <span>🌸</span>
+        <span>🌸</span>
+        <span>🌸</span>
+
+    </div>
+
+
+    <div class="flower-branch branch-right">
+
+        <span>🌸</span>
+        <span>🌸</span>
+        <span>🌸</span>
+        <span>🌸</span>
+
+    </div>
+
+<!-- ====================
+     左右樱花枝
+==================== -->
+
+<div class="sakura-branch branch-left">
+
+    <div class="branch-line"></div>
+
+    <span class="blossom b1">🌸</span>
+    <span class="blossom b2">🌸</span>
+    <span class="blossom b3">🌸</span>
+    <span class="blossom b4">🌸</span>
+    <span class="blossom b5">🌸</span>
+
+</div>
+
+
+<div class="sakura-branch branch-right">
+
+    <div class="branch-line"></div>
+
+    <span class="blossom b1">🌸</span>
+    <span class="blossom b2">🌸</span>
+    <span class="blossom b3">🌸</span>
+    <span class="blossom b4">🌸</span>
+    <span class="blossom b5">🌸</span>
+
+</div>
+
+    <!-- =====================
+         喜鹊
+    ====================== -->
+
+    <div class="magpies">
+
+
+        <!-- 左边喜鹊 -->
+
+        <div class="magpie magpie-left">
+
+            <img
+                src="images/magpie.png"
+                alt="喜鹊"
+            >
+
+        </div>
+
+
+        <!-- 右边喜鹊 -->
+
+        <div class="magpie magpie-right">
+
+            <img
+                src="images/magpie.png"
+                alt="喜鹊"
+            >
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================
+         鹊桥
+    ====================== -->
+
+    <div class="bridge">
+
+
+        <svg
+            class="bridge-svg"
+            viewBox="0 0 1000 300"
+            preserveAspectRatio="none"
+        >
+
+
+            <!-- 左边光晕 -->
+
+            <path
+                class="bridge-glow-left"
+                d="M 500 20
+                   C 400 20
+                   150 100
+                   40 240"
+            />
+
+
+            <!-- 右边光晕 -->
+
+            <path
+                class="bridge-glow-right"
+                d="M 500 20
+                   C 600 20
+                   850 100
+                   960 240"
+            />
+
+
+            <!-- 左边桥 -->
+
+            <path
+                class="bridge-left"
+                d="M 500 20
+                   C 400 20
+                   150 100
+                   40 240"
+            />
+
+
+            <!-- 右边桥 -->
+
+            <path
+                class="bridge-right"
+                d="M 500 20
+                   C 600 20
+                   850 100
+                   960 240"
+            />
+
+        </svg>
+
+
+        <!-- 桥上的星光 -->
+
+        <div class="bridge-sparkles">
+
+            <span>✦</span>
+            <span>✦</span>
+            <span>✦</span>
+            <span>✦</span>
+            <span>✦</span>
+            <span>✦</span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================
+         日期
+    ====================== -->
+
+    <div class="title-transition">
+
+    <div class="number">
+        19
+    </div>
+
+    <div class="title-text">
+        19.8.2026
+    </div>
+
+    <div class="bridge-message">
+        一年一度的七夕
+    </div>
+
+    <!-- 第一幕结束按钮 -->
+    <button class="next-button" id="nextButton">
+        故事还没结束
+    </button>
+
+</div>
+
+
+
+</div>
+
+<!-- =================================
+     第二幕
+================================= -->
+
+<div class="scene-two" id="sceneTwo">
+
+<div class="scene-two-petals">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+<!-- 第二幕流星雨 -->
+<div class="meteor-layer" id="meteorLayer"></div>
+
+    <!-- 左边花束 -->
+<div class="flower flower-left">
+
+    <div class="flower-glow"></div>
+
+    <img
+        src="images/rose.png"
+        class="rose"
+        alt="玫瑰"
+    >
+
+    <img
+        src="images/lisianthus.png"
+        class="lisianthus"
+        alt="洋桔梗"
+    >
+
+</div>
+
+
+<!-- 右边花束 -->
+<div class="flower flower-right">
+
+    <div class="flower-glow"></div>
+
+    <img
+        src="images/lisianthus.png"
+        class="lisianthus"
+        alt="洋桔梗"
+    >
+
+    <img
+        src="images/rose.png"
+        class="rose"
+        alt="玫瑰"
+    >
+
+</div>
+
+
+<!-- Kuromi 彩蛋 -->
+<div class="kuromi-container">
+
+    <img
+        src="images/kuromi.png"
+        class="kuromi"
+        alt="Kuromi"
+    >
+
+    <!-- 彩蛋按钮 -->
+   <button
+    class="kuromi-button"
+    id="kuromiButton"
+    onclick="kuromiTalk()"
+>
+    按我！
+</button>
+
+    <!-- Kuromi说的话 -->
+    <div
+        class="kuromi-speech"
+        id="kuromiSpeech"
+    >
+        有人给你写了一封信~
+    </div>
+
+<!-- 信封 -->
+<button
+    class="letter-button"
+    id="letterButton"
+>
+    💌
+</button>
+
+</div>
+
+
+    <!-- 第二幕文字 -->
+    <div class="scene-two-message">
+
+        <div class="message-line">
+            有些花，
+        </div>
+
+        <div class="message-line">
+            看到的时候，
+        </div>
+
+        <div class="message-line">
+            就会想起某个人。
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =================================
+     第三幕：写给你的信
+================================= -->
+
+<div class="scene-three" id="sceneThree">
+
+    <div class="letter-paper" id="letterPaper">
+
+        <div class="letter-date">
+            19.8.2026
+        </div>
+
+        <div class="letter-title">
+            T0:乙萱
+        </div>
+
+        <div class="letter-pages">
+
+    <!-- 第 1 页 -->
+    <div class="letter-page active" data-page="1">
+
+        <div class="letter-content">
+
+    <p>
+        嗨，如果你真的看到这里，那应该说明，你还是愿意打开这封信。
+    </p>
+
+    <p>
+        其实很多话，我一直想和你说，多到我有时候自己都不知道应该从哪一句开始。
+        我想了很久，最后还是决定从一个很简单的问题开始。
+    </p>
+
+    <p>
+        我到底为什么喜欢你？
+    </p>
+
+    <p>
+        我以前刚开始可能会觉得，是因为你一开始对我的主动，是因为你愿意靠近我，
+        是因为你总是愿意回应我。
+    </p>
+
+    <p>
+        不过后来我发现，好像并不是。
+    </p>
+
+    <p>
+        我喜欢的从来不只是一开始会主动找我的你。
+        我还喜欢爱生气的你，喜欢一点小委屈就掉眼泪的小哭包，
+        喜欢爱耍赖的你，明明有时候自己都知道自己没道理，
+        却还是要跟我争的样子，简直不要太可爱。
+    </p>
+
+    <p>
+        也喜欢你早上刚睡醒，迷迷糊糊的就给我发语音，
+        那声音每次都把我的心融化。
+    </p>
+
+    <p>
+        也喜欢连冲凉都会发信息的你，
+        甚至喜欢你一生气就不说话，
+        聊前女友时疯狂吃醋的样子，
+        喜欢你不开心就瞪我的样子。
+    </p>
+
+    <p>
+        那时候我好像觉得这一切都是理所应当的。
+        好像只要我想找你，你就会一直在那里。
+    </p>
+
+    <p>
+        但现在回想起，我才发现，
+        原来那些看起来很普通的「句句有回应」，
+        也是一种很珍贵的偏爱。
+    </p>
+
+    <p>
+        只是，我没能好好珍惜你的一切。
+    </p>
+
+</div>
+
+    </div>
+
+
+    <!-- 第 2 页 -->
+    <div class="letter-page" data-page="2">
+
+       <div class="letter-content">
+
+    <p>
+        其实我最舍不得的，并不是那些我们拥有过的回忆，
+        而是我们还有好多好多事情，还没来得及一起经历。
+    </p>
+
+    <p>
+        我们还没有面对面相处过，
+        还没有牵手一起散步，
+        还没有深情拥抱过，
+        没有情不自禁地接吻过，
+        甚至连一次真正认真、面对面、手捧鲜花的告白都还没有。
+    </p>
+
+    <p>
+        我们还没有一起去超市买过菜，
+        没有一起在厨房忙到乱七八糟，
+        我做饭，你在旁边洗碗。
+    </p>
+
+    <p>
+        还没有一起经历那些看似普通，
+        却又很幸福的日子。
+    </p>
+
+    <p>
+        可偏偏现在才发觉，
+        这些我最舍不得的，
+        其实不是过去。
+    </p>
+
+    <p>
+        而是我人生中的女主角——
+        <strong>你。</strong>
+    </p>
+
+</div>
+
+    </div>
+
+
+    <!-- 第 3 页 -->
+    <div class="letter-page" data-page="3">
+
+        <div class="letter-content">
+
+    <p>
+        我想很认真地跟你说一句：
+        <strong>对不起，乙萱。</strong>
+    </p>
+
+    <p>
+        对不起我以前给你说过这么多重话。
+        对不起我曾经因为自己的情绪，
+        让你觉得自己好像做得不够好。
+    </p>
+
+    <p>
+        那时候的我，与其说没有安全感，
+        其实更多的是害怕失去你。
+    </p>
+
+    <p>
+        你没有及时回复我，
+        我就会开始胡思乱想。
+        会想你是不是不开心，
+        是不是不想理我了，
+        是不是慢慢不需要我了。
+    </p>
+
+    <p>
+        甚至会害怕，
+        你是不是有一天真的会不要我。
+    </p>
+
+    <p>
+        所以，我的情绪变得不稳定。
+        把自己的害怕变成了你的压力，
+        把自己的不安变成了你的委屈。
+    </p>
+
+    <p>
+        有时候甚至会用一些不好听的话，
+        把我自己的难过丢给你。
+    </p>
+
+    <p>
+        经历了失去后，我才醒悟，
+        现实是你没有及时回复信息罢了，
+        其他都是我自己脑补的结局。
+        所以，那不是你的错。
+    </p>
+
+    <p>
+        你也有自己的工作，
+        有自己的家庭，
+        更有自己的压力。
+        你也会累，也会有不想说话的时候。
+    </p>
+
+    <p>
+        而作为你的男朋友，
+        那时候的我却没有真正站在你的角度去想。
+    </p>
+
+    <p>
+        我只是一直害怕失去你，
+        却忘记了真正喜欢一个人，
+        不应该让她一直证明自己还爱你。
+    </p>
+
+    <p>
+        我本来应该成为那个让你安心的人，
+        让你累的时候，可以靠一下的人；
+        让你什么都不用解释，
+        也知道我不会离开的人；
+        让你想独处的时候，
+        我也愿意安静地在身后等你的人。
+    </p>
+
+    <p>
+        可是那时候我没有做到。
+    </p>
+
+    <p>
+        我自以为是的爱，
+        变成了困住你的枷锁。
+    </p>
+
+    <p>
+        作为一个男朋友，
+        我是失职的。
+    </p>
+
+    <p>
+        我多希望自己可以成为你的温暖，
+        而不是压力。
+    </p>
+
+    <p>
+        我知道，我亲手把一个很爱的人弄丢了。
+        这一点，我一直很自责。
+    </p>
+
+    <p>
+        但我不想让自责成为我唯一为这段感情做的事。
+    </p>
+
+    <p class="letter-highlight">
+        至于改变，无需多言。
+        <br>
+        行动证明。
+    </p>
+
+</div>
+
+    </div>
+
+
+    <!-- 第 4 页 -->
+    <div class="letter-page" data-page="4">
+
+       <div class="letter-content">
+
+    <p>
+        你知道吗？
+    </p>
+
+    <p>
+        小王子曾经遇到很多很多漂亮的玫瑰，
+        可最后他还是想要那一朵玫瑰。
+    </p>
+
+    <p>
+        而我也遇见了我的那朵玫瑰。
+    </p>
+
+    <p>
+        她可能爱生气，会哭，会耍赖，会逃避，
+        可是偏偏就是这样的她，
+        才是我喜欢的她。
+    </p>
+
+    <p>
+        我喜欢的从来不是一个完美的你，
+        而是真实的你。
+    </p>
+
+    <p>
+        我舍不得的根本不是什么谈恋爱的感觉。
+    </p>
+
+    <p>
+        <strong>我舍不得的是你。</strong>
+    </p>
+
+    <p>
+        所以今天，我不想拐弯抹角，
+        想认真地告诉你——
+    </p>
+
+    <p class="letter-love">
+        我喜欢你。
+    </p>
+
+    <p>
+        不是因为我们曾经在一起，
+        也不是因为我不甘心。
+    </p>
+
+    <p>
+        而是我在分开以后，
+        真正冷静下来思考后才发现，
+        我喜欢的人，一直以来只有你。
+    </p>
+
+    <p>
+        只是这一次，
+        我不想再像以前那样。
+    </p>
+
+    <p>
+        我终于明白，
+        爱不是索取，不是控制。
+    </p>
+
+    <p>
+        爱是包容，
+        是允许你做自己。
+    </p>
+
+</div>
+
+    </div>
+
+
+    <!-- 第 5 页 -->
+    <div class="letter-page" data-page="5">
+
+        <div class="letter-content">
+
+    <p class="letter-date-main">
+        19.8.2026
+    </p>
+
+    <p>
+        乙萱，七夕节快乐。
+    </p>
+
+    <p>
+        这一天，也原本是我们在一起两个月的日子。
+    </p>
+
+    <p>
+        这是一封告白信。
+    </p>
+
+    <p>
+        我想把它写成故事的开始。
+    </p>
+
+    <p>
+        恰好今天是一个意义非凡的日子，
+        所以我想在今天这么特别的日子里，
+        认真地告诉你——
+    </p>
+
+    <p class="letter-love">
+        我还喜欢你。
+    </p>
+
+    <p>
+        谢谢你。
+    </p>
+
+    <p>
+        你短暂的离别，
+        留给了我成长的空间。
+    </p>
+
+    <p>
+        它让我意识到自己的问题，
+        也让我第一次真正发现，
+        原来我真的有奋不顾身去爱一个人的勇气。
+    </p>
+
+    <p>
+        而那个人，
+        从始至终，还是你。
+    </p>
+
+    <p>
+        如果你愿意，
+        故事的下一页，还是想和你一起写。
+
+
+</div>
+
+<div class="letter-sign">
+    —— 大坏蛋
+</div>
+
+    </div>
+
+</div>
+
+
+<!-- 页码 -->
+
+<div class="letter-page-number">
+
+    <span id="letterPageNumber">
+        01 / 05
+    </span>
+
+</div>
+
+
+<!-- 下一页按钮 -->
+
+<button
+    class="letter-next"
+    id="letterNext"
+>
+    继续读
+</button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const pages = document.querySelectorAll(".letter-page");
+    const nextBtn = document.getElementById("letterNext");
+    const pageNumber = document.getElementById("letterPageNumber");
+
+    let currentPage = 0;
+
+    if (!pages.length || !nextBtn) {
+        console.log("情书翻页元素没有找到");
+        return;
+    }
+
+    /* 初始化：只显示第一页 */
+    pages.forEach((page, index) => {
+        page.classList.remove("active");
+
+        if (index === 0) {
+            page.classList.add("active");
+        }
+    });
+
+    nextBtn.addEventListener("click", function () {
+
+        /* 如果已经是最后一页 → 关闭信件 */
+        if (currentPage === pages.length - 1) {
+
+            pages.forEach(page => {
+                page.style.transition = "opacity 0.8s ease";
+                page.style.opacity = "0";
+            });
+
+            if (pageNumber) {
+                pageNumber.style.transition = "opacity 0.8s ease";
+                pageNumber.style.opacity = "0";
+            }
+
+            nextBtn.style.transition = "opacity 0.8s ease";
+            nextBtn.style.opacity = "0";
+
+            setTimeout(() => {
+
+                pages.forEach(page => {
+                    page.style.display = "none";
+                });
+
+                nextBtn.style.display = "none";
+
+                if (pageNumber) {
+                    pageNumber.style.display = "none";
+                }
+
+            }, 800);
+
+            return;
+        }
+
+        /* 隐藏当前页 */
+        pages[currentPage].classList.remove("active");
+
+        /* 下一页 */
+        currentPage++;
+
+        /* 显示下一页 */
+        pages[currentPage].classList.add("active");
+
+        /* 更新页码 */
+        if (pageNumber) {
+            pageNumber.textContent =
+                String(currentPage + 1).padStart(2, "0")
+                + " / "
+                + String(pages.length).padStart(2, "0");
+        }
+
+        /* 最后一页按钮文字 */
+        if (currentPage === pages.length - 1) {
+            nextBtn.textContent = "读完了";
+        } else {
+            nextBtn.textContent = "继续读";
+        }
+
+    });
+
+});
+</script>
+</body>
+
+</html>
